@@ -3,7 +3,7 @@ FROM alpine
 COPY . /app
 
 RUN apk add --no-cache py-pip \
-	&& pip install flask
+	&& pip install flask && pip install simplejson
 
 ENV FLASK_APP /app/app.py
 
